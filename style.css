@@ -1,0 +1,9 @@
+body {
+    background-image: url("tacos.jpg");
+    font-family: 'Acme', sans-serif;
+    text-align: center;
+}
+
+button {
+    align-self: auto;
+}
