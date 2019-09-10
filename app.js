@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 $("#getAtaco").on("click", function() {
     
-    var queryURL = "http://taco-randomizer.herokuapp.com/random/"
+    var queryURL = "https://taco-randomizer.herokuapp.com/random/"
 
     
       $.ajax({
