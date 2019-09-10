@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
-    let tacoName = ""
+$("#recipe").hide()
+$("#meatType").hide()
 
 $("#getAtaco").on("click", function() {
     
@@ -18,6 +19,7 @@ $("#getAtaco").on("click", function() {
         
         $("#yourTaco").empty()
         $("#yourTaco").append(tacoName + " Taco")
+        $("#recipe").show()
       
         let newName = tacoName.toLowerCase()
         console.log(newName)
@@ -27,18 +29,16 @@ $("#getAtaco").on("click", function() {
         let chicken = newName.includes("chicken")
         let lamb = newName.includes("lamb")
         let carnitas = newName.includes("carnitas")
+        let turkey = newName.includes("turkey")
 
-        if (beef || steak || pork || chicken || lamb || carnitas) {
-            $("#meatType").empty()
-            $("#meatType").append("Carnivore Taco")
-            $("#recipe").text(recipe)
+        if (beef || steak || pork || chicken || lamb || carnitas || turkey) {
+            $("#meatType").hide()
         }
         else {
-            $("#meatType").empty()
-            $("#meatType").append("Vegetarian Taco")
-            $("#recipe").text(recipe)
+            $("#meatType").show()
         }
 
+        $("#recipe").text(recipe)
 
     
     
